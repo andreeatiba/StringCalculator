@@ -6,27 +6,24 @@
         xmlns:ignore="http://www.galasoft.ch/ignore"
         mc:Ignorable="d ignore"
         Height="300"
-        Width="300"
-        Title="MVVM Light Application"
+        Width="350"
+        Title="String Calculator Project"
         DataContext="{Binding Main, Source={StaticResource Locator}}">
-    
-    <Window.Resources>
-        <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="Skins/MainSkin.xaml" />
-            </ResourceDictionary.MergedDictionaries>
-        </ResourceDictionary>
-    </Window.Resources>
 
     <Grid x:Name="LayoutRoot">
-
-        <TextBlock FontSize="36"
-                   FontWeight="Bold"
-                   Foreground="Purple"
-                   Text="{Binding WelcomeTitle}"
-                   VerticalAlignment="Center"
-                   HorizontalAlignment="Center"
-                   TextWrapping="Wrap" />
+        <Label x:Name="LblTitle" Content="String Calculator" HorizontalAlignment="Left" Margin="94,10,0,0" 
+               VerticalAlignment="Top" FontWeight="Bold" FontSize="18"/>
+        <Label x:Name="LblNumbers" Content="Add numbers:" HorizontalAlignment="Left" Margin="25,71,0,0" 
+               VerticalAlignment="Top"/>
+        <TextBox x:Name="TxtNumbers" HorizontalAlignment="Left" Height="26" Margin="112,71,0,0" 
+                 TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="114"
+                 FontStyle="Italic"/>
+        <Button x:Name="BtnAdd" Content="Add" HorizontalAlignment="Left" Margin="241,71,0,0" 
+                VerticalAlignment="Top" Width="75" Height="26"/>
+        <Label x:Name="LblResult" Content="Result:" HorizontalAlignment="Left" Margin="25,127,0,0" 
+               VerticalAlignment="Top" Width="62"/>
+        <TextBlock x:Name="TxtBlockResult" HorizontalAlignment="Left" Margin="82,132,0,0" 
+                   TextWrapping="Wrap" Text="..." VerticalAlignment="Top" Height="21" Width="168"/>
 
     </Grid>
 </Window>

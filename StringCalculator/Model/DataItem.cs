@@ -2,15 +2,8 @@
 {
     public class DataItem
     {
-        public string Title
+        public DataItem()
         {
-            get;
-            private set;
-        }
-
-        public DataItem(string title)
-        {
-            Title = title;
         }
     }
 }
