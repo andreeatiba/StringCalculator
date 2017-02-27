@@ -14,6 +14,8 @@ namespace StringCalculator.Model
         public int Add(string numbers)
         {
             if (string.IsNullOrEmpty(numbers)) return 0;
+            int number;
+            if (int.TryParse(numbers, out number)) return number;
             var s = 0;
             return s;
         }
