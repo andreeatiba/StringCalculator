@@ -1,14 +1,33 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
+using StringCalculator.Model;
 
 namespace StringCalculatorUnitTest
 {
-    [TestClass]
+    [TestFixture]
     public class DataServiceUnitTest
     {
-        [TestMethod]
-        public void TestMethod1()
+        private IDataService _dataService;
+
+        [SetUp]
+        public void RunBeforeAnyTests()
         {
+            _dataService = new DataService();
+
+        }
+
+        [Test]
+        public void EmptyStringShouldReturnZero()
+        {
+            var result = _dataService.Add(string.Empty);
+            Assert.AreEqual(result, 0);
+        }
+
+        [Test]
+        public void SpacesShouldReturnZero()
+        {
+            var result = _dataService.Add("  ");
+            Assert.AreEqual(result, 0);
         }
     }
 }
