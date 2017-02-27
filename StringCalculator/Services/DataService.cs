@@ -21,7 +21,8 @@ namespace StringCalculator.Model
             foreach (var sN in stringNumbers)
             {
                 int currentNumber;
-                if (int.TryParse(sN, out currentNumber))
+                if (!int.TryParse(sN, out currentNumber)) continue;
+                if (currentNumber <= 500)
                 {
                     s += currentNumber;
                 }
