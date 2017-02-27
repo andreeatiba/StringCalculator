@@ -4,14 +4,18 @@ namespace StringCalculator.Model
 {
     public class DataService : IDataService
     {
+        private readonly string[] _delimiterChars = { " ", @"\n", Environment.NewLine };
         public void InitializeData(Action<DataItem, Exception> callback)
         {
-            throw new NotImplementedException();
+            var item = new DataItem(string.Empty, "...");
+            callback(item, null);
         }
 
         public int Add(string numbers)
         {
-            throw new NotImplementedException();
+            if (string.IsNullOrEmpty(numbers)) return 0;
+            var s = 0;
+            return s;
         }
     }
 }
