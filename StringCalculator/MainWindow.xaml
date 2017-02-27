@@ -16,15 +16,17 @@
         <Label x:Name="LblNumbers" Content="Add numbers:" HorizontalAlignment="Left" Margin="10,71,0,0" 
                VerticalAlignment="Top" FontWeight="Bold"/>
         <TextBox x:Name="TxtNumbers" HorizontalAlignment="Left" Height="26" Margin="104,71,0,0" 
-                 TextWrapping="Wrap" VerticalAlignment="Top" Width="228"
+                 TextWrapping="Wrap" VerticalAlignment="Top" Width="218"
                  Text="{Binding Numbers, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" FontSize="16"/>
         <Button x:Name="BtnAdd" Content="Add" HorizontalAlignment="Left" Margin="257,101,0,0" 
-                VerticalAlignment="Top" Width="75" Height="26" 
+                VerticalAlignment="Top" Width="65" Height="26" 
                 Command="{Binding DisplayResultCommand}" FontWeight="Bold"/>
         <Label x:Name="LblResult" Content="Result:" HorizontalAlignment="Left" Margin="10,127,0,0" 
                VerticalAlignment="Top" Width="48" FontWeight="Bold"/>
         <TextBlock x:Name="TxtBlockResult" HorizontalAlignment="Left" Margin="63,132,0,0" 
                    TextWrapping="Wrap" VerticalAlignment="Top" Height="21" Width="168"
                    Text="{Binding Result, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+        <Button x:Name="BtnClear" Content="Clear" Command="{Binding ClearResultCommand}"
+                HorizontalAlignment="Left" Margin="280,43,0,0" VerticalAlignment="Top" Width="42" Height="23" FontWeight="Bold"/>
     </Grid>
 </Window>

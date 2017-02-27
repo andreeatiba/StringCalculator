@@ -51,6 +51,7 @@ namespace StringCalculator.ViewModel
         }
 
         public RelayCommand DisplayResultCommand { get; set; }
+        public RelayCommand ClearResultCommand { get; set; }
 
         public bool CanDisplayResult()
         {
@@ -63,6 +64,15 @@ namespace StringCalculator.ViewModel
         public void ExecuteAdd()
         {
             this.Result = _dataService.Add(Numbers).ToString();
+        }
+
+        /// <summary>
+        /// Execute the Clear action for text controls.
+        /// </summary>
+        public void ExecuteClear()
+        {
+            this.Numbers = string.Empty;
+            this.Result = "...";
         }
 
         /// <summary>
@@ -84,6 +94,7 @@ namespace StringCalculator.ViewModel
                 });
 
             this.DisplayResultCommand = new RelayCommand(this.ExecuteAdd, CanDisplayResult);
+            this.ClearResultCommand = new RelayCommand(this.ExecuteClear, CanDisplayResult);
         }
     }
 }
