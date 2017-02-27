@@ -20,14 +20,14 @@ namespace StringCalculatorUnitTest
         public void EmptyStringShouldReturnZero()
         {
             var result = _dataService.Add(string.Empty);
-            Assert.AreEqual(result, 0);
+            Assert.Zero(result);
         }
 
         [Test]
         public void SpacesShouldReturnZero()
         {
             var result = _dataService.Add("  ");
-            Assert.AreEqual(result, 0);
+            Assert.Zero(0);
         }
 
         [Test]
@@ -70,6 +70,20 @@ namespace StringCalculatorUnitTest
         {
             var result = _dataService.Add("4\\n5" + Environment.NewLine + "4");
             Assert.IsTrue(result == 13);
+        }
+
+        [Test]
+        public void IgnoreNumbersBiggerThan500()
+        {
+            var result = _dataService.Add("1 2 501 40002 3");
+            Assert.AreEqual(6, result);
+        }
+
+        [Test]
+        public void IfAllNumbersAreBiggerThan500ShouldReturnZero()
+        {
+            var result = _dataService.Add("503 654 6754");
+            Assert.Zero(result);
         }
     }
 }
