@@ -54,8 +54,8 @@ namespace StringCalculatorUnitTest
         [Test]
         public void NumbersWithNegativeValuesShouldReturnSumOfThem()
         {
-            var result = _dataService.Add("13 -5 1 14");
-            Assert.AreEqual(result, 23);
+            var result = _dataService.Add("13 5 1 14");
+            Assert.AreEqual(result, 33);
         }
 
         [Test]
@@ -84,6 +84,13 @@ namespace StringCalculatorUnitTest
         {
             var result = _dataService.Add("503 654 6754");
             Assert.Zero(result);
+        }
+
+        [Test]
+        public void IgnoreNegativeValues()
+        {
+            var result = _dataService.Add("23 -3 4");
+            Assert.AreEqual(result, 27);
         }
     }
 }
