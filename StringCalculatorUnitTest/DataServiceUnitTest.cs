@@ -29,5 +29,19 @@ namespace StringCalculatorUnitTest
             var result = _dataService.Add("  ");
             Assert.AreEqual(result, 0);
         }
+
+        [Test]
+        public void ASingleNumberShouldReturnThatNumber()
+        {
+            var result = _dataService.Add("2");
+            Assert.AreEqual(result, 2);
+        }
+
+        [Test]
+        public void ASingleNumberWithTextShouldNotReturnNumber()
+        {
+            var result = _dataService.Add("34tgr");
+            Assert.AreNotEqual(result, 34);
+        }
     }
 }
