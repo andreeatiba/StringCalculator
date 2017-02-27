@@ -19,16 +19,6 @@ namespace StringCalculator.ViewModel
         public MainViewModel(IDataService dataService)
         {
             _dataService = dataService;
-            _dataService.GetData(
-                (item, error) =>
-                {
-                    if (error != null)
-                    {
-                        // Report error here
-                        return;
-                    }
-                    
-                });
         }
     }
 }

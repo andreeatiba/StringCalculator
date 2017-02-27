@@ -4,6 +4,7 @@ namespace StringCalculator.Model
 {
     public interface IDataService
     {
-        void GetData(Action<DataItem, Exception> callback);
+        void InitializeData(Action<DataItem, Exception> callback);
+        int Add(string numbers);
     }
 }
