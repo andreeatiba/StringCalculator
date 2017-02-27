@@ -11,7 +11,7 @@
 
 using GalaSoft.MvvmLight.Ioc;
 using Microsoft.Practices.ServiceLocation;
-using StringCalculator.Model;
+using StringCalculator.Services;
 
 namespace StringCalculator.ViewModel
 {

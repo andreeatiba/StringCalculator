@@ -1,6 +1,6 @@
 ﻿using System;
 using NUnit.Framework;
-using StringCalculator.Model;
+using StringCalculator.Services;
 
 namespace StringCalculatorUnitTest
 {

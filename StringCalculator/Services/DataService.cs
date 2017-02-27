@@ -1,6 +1,7 @@
 ﻿using System;
+using StringCalculator.Model;
 
-namespace StringCalculator.Model
+namespace StringCalculator.Services
 {
     public class DataService : IDataService
     {

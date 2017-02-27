@@ -1,6 +1,6 @@
 ﻿using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
-using StringCalculator.Model;
+using StringCalculator.Services;
 
 namespace StringCalculator.ViewModel
 {
@@ -76,7 +76,6 @@ namespace StringCalculator.ViewModel
                 {
                     if (error != null)
                     {
-                        // Report error here
                         return;
                     }
 
