@@ -13,17 +13,17 @@
     <Grid x:Name="LayoutRoot">
         <Label x:Name="LblTitle" Content="String Calculator" HorizontalAlignment="Left" Margin="94,10,0,0" 
                VerticalAlignment="Top" FontWeight="Bold" FontSize="18"/>
-        <Label x:Name="LblNumbers" Content="Add numbers:" HorizontalAlignment="Left" Margin="25,71,0,0" 
-               VerticalAlignment="Top"/>
-        <TextBox x:Name="TxtNumbers" HorizontalAlignment="Left" Height="26" Margin="112,71,0,0" 
-                 TextWrapping="Wrap" VerticalAlignment="Top" Width="114" FontStyle="Italic"
-                 Text="{Binding Numbers, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
-        <Button x:Name="BtnAdd" Content="Add" HorizontalAlignment="Left" Margin="241,71,0,0" 
+        <Label x:Name="LblNumbers" Content="Add numbers:" HorizontalAlignment="Left" Margin="10,71,0,0" 
+               VerticalAlignment="Top" FontWeight="Bold"/>
+        <TextBox x:Name="TxtNumbers" HorizontalAlignment="Left" Height="26" Margin="104,71,0,0" 
+                 TextWrapping="Wrap" VerticalAlignment="Top" Width="228"
+                 Text="{Binding Numbers, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" FontSize="16"/>
+        <Button x:Name="BtnAdd" Content="Add" HorizontalAlignment="Left" Margin="257,101,0,0" 
                 VerticalAlignment="Top" Width="75" Height="26" 
-                Command="{Binding DisplayResultCommand}"/>
-        <Label x:Name="LblResult" Content="Result:" HorizontalAlignment="Left" Margin="25,127,0,0" 
-               VerticalAlignment="Top" Width="62"/>
-        <TextBlock x:Name="TxtBlockResult" HorizontalAlignment="Left" Margin="82,132,0,0" 
+                Command="{Binding DisplayResultCommand}" FontWeight="Bold"/>
+        <Label x:Name="LblResult" Content="Result:" HorizontalAlignment="Left" Margin="10,127,0,0" 
+               VerticalAlignment="Top" Width="48" FontWeight="Bold"/>
+        <TextBlock x:Name="TxtBlockResult" HorizontalAlignment="Left" Margin="63,132,0,0" 
                    TextWrapping="Wrap" VerticalAlignment="Top" Height="21" Width="168"
                    Text="{Binding Result, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
     </Grid>
